@@ -155,6 +155,10 @@ cython_debug/
 # Mac stuff
 .DS_Store
 
+# week 4 files
+week_4/Artworks.csv
+**/res/**
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
