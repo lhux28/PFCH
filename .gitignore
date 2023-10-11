@@ -157,6 +157,7 @@ cython_debug/
 
 # week 4 files
 week_4/Artworks.csv
+week_5/Artworks.json
 **/res/**
 
 # PyCharm
