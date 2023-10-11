@@ -38,4 +38,4 @@ for object in object_ids:
     title_list.append(object_title)
     #add it to the list
 
-print(json.dumps(title_list, indent=2))
+print(title_list)
