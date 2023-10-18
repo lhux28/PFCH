@@ -4,18 +4,14 @@ import json
 url = 'https://collectionapi.metmuseum.org/public/collection/v1/search'
 #API endpoint -- search feature
 
-url_parameters = {
-    "artistOrCulture": "true",
-    "isOnView": "true",
-    "hasImages": "true",
-    "q": "vincent_van_gogh"
-}
-#search for Vincent Van Gogh in the ArtistsOrCulture key, 
-#and is on view, and has image
+# url_parameters = {
+#     "isOnView": "true",
+#     "hasImages": "true",
+#     "q": "vincent_van_gogh"
+# }
 
-met_api_search = requests.get(url, params=url_parameters)
+met_api_search = requests.get('https://collectionapi.metmuseum.org/public/collection/v1/search?q=van gogh&isOnView=true&hasImages=true')
 #request data from api -- link together the url and parameters
-#is saying this: 'https://collectionapi.metmuseum.org/public/collection/v1/search?artistOrCulture=true&isOnView=true&hasImages=true&q=vincent_van_gogh'
 
 json_data = json.loads(met_api_search.text)
 #make the data from the endpoint readable as a dictionary
