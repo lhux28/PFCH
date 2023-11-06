@@ -7,6 +7,8 @@ import time
 base_url = 'https://www.phillipscollection.org/collection?on_view=1&has_image=1&field_period_target_id[86]=86&page='
 #set variable for the source of my data
 
+dict_list = []
+
 page_num = 0
 while 0 <= page_num < 3:
     time.sleep(0.25)
@@ -33,8 +35,6 @@ while 0 <= page_num < 3:
 
         artist = artwork_div.find('a', {'class': 'card__title-link'}).text.strip()
         #grab all artist names
-
-        dict_list = []
 
         for href in artwork_title:
             time.sleep(0.25)
@@ -81,8 +81,10 @@ while 0 <= page_num < 3:
                 }
 
             # print(art_dict)
-            dict_list.append(art_dict)
-            print(dict_list)
+                dict_list.append(art_dict)
+
+
+print(dict_list)
 
         
 
