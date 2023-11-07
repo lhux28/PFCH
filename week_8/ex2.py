@@ -84,8 +84,8 @@ while 0 <= page_num < 3:
             dict_list.append(art_dict)
 
 
-# print(dict_list)
-print(len(dict_list))
+print(dict_list)
+# print(len(dict_list))
         
 
 
