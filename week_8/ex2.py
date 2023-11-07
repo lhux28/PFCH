@@ -68,24 +68,24 @@ while 0 <= page_num < 3:
             for dimension_span in metadata_div:
                 time.sleep(0.25)
                 dimension_label = dimension_span.find_next("span", {'collection-meta__type'}, string='Dimensions')
-                # print(material_label)
+                # print(dimension_label)
                 
                 if dimension_label:
                     dimensions = dimension_label.find_next("span", {'collection-meta__value'})
                     # print(dimensions)
 
-                art_dict = {
-                    'artist': artist,
-                    'material': material.text.strip(),
-                    'dimensions': dimensions.text.strip()
-                }
+            art_dict = {
+                'artist': artist,
+                'material': material.text.strip(),
+                'dimensions': dimensions.text.strip()
+            }
 
-            # print(art_dict)
-                dict_list.append(art_dict)
+                    # print(art_dict)
+            dict_list.append(art_dict)
 
 
-print(dict_list)
-
+# print(dict_list)
+print(len(dict_list))
         
 
 
